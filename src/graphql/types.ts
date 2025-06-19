@@ -10,7 +10,7 @@ import {
 import UserModel from "../models/User";
 
 export const UserTypeFields = {
-  id: { type: GraphQLID }, // Comes from the virtual "id" field in the schema
+  id: { type: new GraphQLNonNull(GraphQLID) }, // Comes from the virtual "id" field in the schema
 
   firstName: { type: new GraphQLNonNull(GraphQLString) },
   lastName: { type: new GraphQLNonNull(GraphQLString) },
