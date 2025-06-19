@@ -1,6 +1,7 @@
 import dotenv from "dotenv";
 dotenv.config();
 import express, { Express } from "express";
+import cors from "cors";
 // @ts-ignore
 import morgan from "morgan";
 import { graphqlHTTP } from "express-graphql";
@@ -16,6 +17,7 @@ const server: Express = express();
 server.set("trust proxy", 1);
 //middleware
 server.use(express.json());
+server.use(cors());
 server.use(morgan("tiny"));
 
 // routes
