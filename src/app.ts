@@ -10,7 +10,7 @@ import spinUpServer from "./utils/serverSpinUp";
 
 import errorHandler from "./middleware/errorHandler";
 import notFound from "./middleware/notFound";
-import { graphQLSchema } from "./graphql/schema";
+import { graphQLSchema } from "./graphql/Schema";
 
 const server: Express = express();
 
